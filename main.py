@@ -1,9 +1,8 @@
-import os
 from google import genai
 from google.genai.errors import APIError
 
 
-def res(prompt: str) -> str:
+def req(prompt: str) -> str:
 
     try:
         client = genai.Client(api_key="AIzaSyC1oted8kY76A63xR8Mezg3-040-9sJXTI")
@@ -19,4 +18,4 @@ def res(prompt: str) -> str:
     except Exception as e:
         return f"Неизвестная ошибка: {e}"   
     
-print(get_wellness_advice("hello"))
+print(req("hello"))
